@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Teko', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .container {
     max-width: 1300px;
@@ -16,6 +16,7 @@ a {
     text-decoration: none;
 }
 .header {
+    position: relative;
     width: 100%;
     background: #345;
     padding: 20px;
@@ -23,18 +24,24 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-.logo {
+.header__logo {
     font-size: 48px;
     color: #ffd;
 }
 #bar {
     display: none;
 }
-.open {
+.header__label {
+    font-weight: 300;
     font-size: 36px;
     color: #ffd;
     cursor: pointer;
     display: none;
+}
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
 }
 .menu a {
     font-size: 24px;
@@ -51,27 +58,27 @@ a {
     width: 65%;
     background: #456;
 }
-article {
+.articulo {
     position: relative;
 }
-h2 {
+.articulo__titulo {
     font-size: 32px;
     color: #ffd;
     text-align: center;
     margin-top: 12px;
 }
-p {
+.articulo__texto {
     font-size: 24px;
     color: #ffd;
     text-align: center;
     margin-bottom: 12px;
 }
-article img {
-    width: 96%;
+.articulo__img {
+    width: 94%;
     margin-left: 15px;
-   border: 5px solid #ffd;
+    border: 5px solid #ffd;
 }
-.time {
+.articulo__time {
     position: absolute;
     top: 105px;
     left: 30px;
@@ -79,16 +86,16 @@ article img {
     height: 90px;
     background: #200;
     padding: 10px;
-    box-shadow: 4px 4px 16px rgb(32,0,0);
+    box-shadow: 4px 4px rgb(32,0,0);
     border-radius: 4px;
 }
-.numero-dia {
+.articulo__numero-dia {
     font-size: 32px;
     color: #ffd;
     text-align: center;
 }
-.nombre-dia {
-    font-size: 20px;
+.articulo__nombre-dia {
+    font-size: 16px;
     color: #ffd;
     text-align: center;
 }
@@ -102,7 +109,7 @@ article img {
     margin-top: 20px;
     text-align: center;
 }
-.publicidad img {
+.publicidad__img {
     width: 96%;
     margin-top: 30px;
     margin-bottom: 100px;
@@ -116,37 +123,48 @@ article img {
     align-items: center;
     padding: 15px;
 }
-.footer h3 {
+.footer__nombre {
     font-weight: normal;
     font-size: 24px; 
 }
-.footer img {
+.footer__img {
     width: 30px;
 }
 @media (max-width: 600px) {
-    .open {
+    .header__label {
         display: block;
     }
-    .menu {
+    .nav {
         position: absolute;
-        top: 125px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        background: #345;
+        top: 115px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(51,68,85,.9);
         z-index: 100;
         transform: scale(0);
         transform-origin: top center;
         transition: all .5s;
     }
-    #bar:checked ~ .menu {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu__li {
+        margin-bottom: 50px;
+    }
+    .menu a {
+        margin-bottom: 50px;
+        border-bottom: 1px solid #ffd;
+    }
+    #bar:checked ~ .nav {
         transform: scale(1);
     }
     .articulos {
         width: 100%;
     }
-    article img {
+    .articulo__img {
         width: calc(100vw - 40px);
         margin-right: 15px;
     }
