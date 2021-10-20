@@ -26,7 +26,7 @@ a {
 }
 .header__logo {
     font-size: 48px;
-    color: #ffd;
+    color: #fff;
 }
 #bar {
     display: none;
@@ -34,7 +34,7 @@ a {
 .header__label {
     font-weight: 300;
     font-size: 36px;
-    color: #ffd;
+    color: #fff;
     cursor: pointer;
     display: none;
 }
@@ -45,7 +45,7 @@ a {
 }
 .menu a {
     font-size: 24px;
-    color: #ffd;
+    color: #fff;
     padding: 10px 20px;
 }.menu a:hover {
     background: rgba(0,0,0,.3);
@@ -63,20 +63,20 @@ a {
 }
 .articulo__titulo {
     font-size: 32px;
-    color: #ffd;
+    color: #fff;
     text-align: center;
     margin-top: 12px;
 }
 .articulo__texto {
     font-size: 24px;
-    color: #ffd;
+    color: #fff;
     text-align: center;
     margin-bottom: 12px;
 }
 .articulo__img {
     width: 94%;
     margin-left: 15px;
-    border: 5px solid #ffd;
+    border: 5px solid #fff;
 }
 .articulo__time {
     position: absolute;
@@ -91,12 +91,12 @@ a {
 }
 .articulo__numero-dia {
     font-size: 32px;
-    color: #ffd;
+    color: #fff;
     text-align: center;
 }
 .articulo__nombre-dia {
     font-size: 16px;
-    color: #ffd;
+    color: #fff;
     text-align: center;
 }
 .sidebar {
@@ -105,7 +105,7 @@ a {
 }
 .publicidad h3 {
     font-size: 40px;
-    color: #ffd;
+    color: #fff;
     margin-top: 20px;
     text-align: center;
 }
@@ -117,7 +117,7 @@ a {
 .footer {
     width: 100%;
     background: #345;
-    color: #ffd;
+    color: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -156,7 +156,7 @@ a {
     }
     .menu a {
         margin-bottom: 50px;
-        border-bottom: 1px solid #ffd;
+        border-bottom: 1px solid #fff;
     }
     #bar:checked ~ .nav {
         transform: scale(1);
